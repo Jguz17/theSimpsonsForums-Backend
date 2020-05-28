@@ -27,9 +27,9 @@ class SimpsonsController < ApplicationController
     def update 
         simpson = Simpson.find(params[:id])
 
-        name = params[:editedSimpsonName]
-        quote = params[:editedSimpsonQuote]
-        image = params[:editedSimpsonUrl]
+        name = params[:name]
+        quote = params[:quote]
+        image = params[:image]
 
         simpson.update(name: name, quote: quote, image: image)
         render json: simpson
